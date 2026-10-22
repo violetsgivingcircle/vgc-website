@@ -8,18 +8,18 @@
 :root {
   --periwinkle: #C3CDF1;   /* header bands, soft backgrounds */
   --lavender:   #F0DDFD;   /* page background accents */
-  --purple:     #9486C0;   /* panels, buttons */
-  --indigo:     #444082;   /* headings, links, strong accents */
+  --purple:     #5E4492;   /* panels, buttons (deep violet from the flower petals) */
+  --indigo:     #34245C;   /* headings, links, strong accents (darkest flower violet) */
   --ink:        #231F20;   /* body text */
   --white:      #FFFFFF;
   --magenta:    #D6336C;   /* small accent only (flower center) */
   --aqua:       #D3EEF0;   /* photo borders */
 
-  --font-heading: "Bodoni Moda", "Didot", Georgia, serif;
-  --font-body: "Nunito Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "DM Serif Display", Georgia, serif;
+  --font-body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
 
-  --radius: 22px;
-  --max-width: 1100px;
+  --radius: 0;
+  --max-width: 1180px;
 }
 
 * { box-sizing: border-box; }
@@ -51,7 +51,7 @@ h1, h2, h3 {
   font-family: var(--font-heading);
   color: var(--indigo);
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 1rem; }
@@ -77,8 +77,8 @@ h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.4rem;
 }
 
 .brand {
@@ -88,14 +88,14 @@ h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
   text-decoration: none;
 }
 
-.brand-logo { width: 64px; height: 64px; object-fit: contain; }
+.brand-logo { width: 96px; height: 96px; object-fit: contain; }
 
 .brand-name {
   font-family: var(--font-heading);
   color: var(--indigo);
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  font-size: clamp(1.05rem, 3vw, 1.8rem);
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
 }
 
 .nav-toggle {
@@ -103,7 +103,7 @@ h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
   background: var(--indigo);
   color: var(--white);
   border: 0;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 0.55rem 1rem;
   font: inherit;
   font-weight: 700;
@@ -113,7 +113,7 @@ h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
 .site-nav ul {
   list-style: none;
   margin: 0;
-  padding: 0.25rem 1rem 0.9rem;
+  padding: 0.25rem 1rem 0.7rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -146,8 +146,8 @@ h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
 .carousel {
   position: relative;
   max-width: var(--max-width);
-  margin: 1.5rem auto 0;
-  border-radius: var(--radius);
+  margin: 1rem auto 0;
+  border-radius: 0;
   overflow: hidden;
   background: var(--periwinkle);
 }
@@ -170,7 +170,7 @@ h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
   background: rgba(255, 255, 255, 0.85);
   color: var(--indigo);
   border: 0;
-  border-radius: 50%;
+  border-radius: 0;
   width: 44px;
   height: 44px;
   font-size: 1.4rem;
@@ -192,7 +192,7 @@ h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
 .carousel-dots button {
   width: 11px;
   height: 11px;
-  border-radius: 50%;
+  border-radius: 0;
   border: 0;
   background: rgba(255, 255, 255, 0.6);
   cursor: pointer;
@@ -202,21 +202,21 @@ h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
 
 /* ---------- Page sections ---------- */
 
-main { padding-bottom: 3rem; }
+main { padding-bottom: 0; }
 
-.section { padding: 2.5rem 0; }
+.section { padding: 1.75rem 0; }
 
 .page-banner {
   background: var(--periwinkle);
   text-align: center;
-  padding: 2.5rem 1rem;
+  padding: 1.5rem 1rem;
 }
 .page-banner h1 { margin: 0; }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   text-align: center;
-  max-width: 760px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
@@ -229,8 +229,8 @@ main { padding-bottom: 3rem; }
 .panel {
   background: var(--purple);
   color: var(--white);
-  border-radius: var(--radius);
-  padding: 2rem;
+  border-radius: 0;
+  padding: 1.6rem 1.75rem;
 }
 .panel h2, .panel h3 { color: var(--white); text-transform: uppercase; }
 .panel a { color: var(--white); }
@@ -238,19 +238,19 @@ main { padding-bottom: 3rem; }
 
 .card {
   background: var(--lavender);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: 1.75rem;
 }
 
 .save-the-date {
   background: var(--lavender);
   text-align: center;
-  padding: 2.5rem 1rem;
+  padding: 1.75rem 1rem;
 }
 .save-the-date h2 { text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
 .save-the-date p { font-size: 1.3rem; margin: 0 0 1rem; }
 
-.stat { text-align: center; padding: 2rem 1rem; }
+.stat { text-align: center; padding: 1.5rem 1rem; }
 .stat strong {
   display: block;
   font-family: var(--font-heading);
@@ -266,7 +266,7 @@ main { padding-bottom: 3rem; }
   font-weight: 700;
   letter-spacing: 0.04em;
   padding: 0.8rem 1.6rem;
-  border-radius: 999px;
+  border-radius: 0;
 }
 .btn:hover { background: var(--magenta); color: var(--white); }
 
@@ -280,14 +280,14 @@ main { padding-bottom: 3rem; }
 
 .photo-frame {
   border: 8px solid var(--aqua);
-  border-radius: var(--radius);
+  border-radius: 0;
   overflow: hidden;
   background: var(--aqua);
 }
 
 .caption {
   background: var(--periwinkle);
-  border-radius: 14px;
+  border-radius: 0;
   padding: 0.9rem 1.1rem;
   font-size: 0.9rem;
   margin-top: 1rem;
@@ -302,7 +302,7 @@ main { padding-bottom: 3rem; }
   border: 2px dashed var(--magenta);
   background: #fff5f9;
   color: var(--ink);
-  border-radius: 14px;
+  border-radius: 0;
   padding: 1rem 1.25rem;
   margin: 1rem 0;
   font-size: 0.95rem;
@@ -321,12 +321,12 @@ main { padding-bottom: 3rem; }
   width: 180px;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 0;
 }
 .chair-name {
   font-family: var(--font-heading);
   color: var(--indigo);
-  font-weight: 600;
+  font-weight: 400;
   margin: 0 0 0.5rem;
 }
 blockquote.quote { margin: 0; font-style: italic; }
@@ -339,7 +339,7 @@ blockquote.quote { margin: 0; font-style: italic; }
 details.past-chairs,
 details.collapse-box {
   background: var(--lavender);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: 0.5rem 1.25rem 1.25rem;
 }
 details.past-chairs > summary,
@@ -353,7 +353,7 @@ details.collapse-box > summary {
 }
 .chair-year {
   background: var(--white);
-  border-radius: 14px;
+  border-radius: 0;
   padding: 1rem 1.25rem 1.25rem;
   margin-bottom: 1rem;
 }
@@ -375,7 +375,7 @@ details.collapse-box > summary {
   width: 96px;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0;
   background: var(--periwinkle);
 }
 .chair-person blockquote { font-size: 0.95rem; }
@@ -385,7 +385,7 @@ details.collapse-box > summary {
 .video-wrap {
   position: relative;
   aspect-ratio: 16 / 9;
-  border-radius: var(--radius);
+  border-radius: 0;
   overflow: hidden;
   background: var(--ink);
   margin-top: 1rem;
@@ -400,7 +400,7 @@ details.collapse-box > summary {
   gap: 1.25rem;
   background: var(--white);
   border: 1px solid var(--periwinkle);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: 1.25rem 1.75rem;
   margin: 0.5rem 0 1.5rem;
   text-align: left;
@@ -439,7 +439,7 @@ details.collapse-box > summary {
 .event {
   max-width: 940px;
   margin: 0 auto;
-  padding: 2.25rem 0;
+  padding: 1.5rem 0;
   text-align: center;
   border-bottom: 1px solid var(--periwinkle);
 }
@@ -455,7 +455,7 @@ details.collapse-box > summary {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0;
   background: var(--periwinkle);
 }
 details.collapse-box .event:last-child { border-bottom: 0; }
@@ -473,7 +473,7 @@ details.collapse-box .event:last-child { border-bottom: 0; }
   flex-direction: column;
   background: var(--white);
   border: 1px solid var(--periwinkle);
-  border-radius: var(--radius);
+  border-radius: 0;
   overflow: hidden;
   text-decoration: none;
   color: var(--ink);
@@ -516,14 +516,14 @@ a.partner-card:hover {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
-  border-radius: var(--radius);
+  border-radius: 0;
 }
 
 .process-steps {
   list-style: none;
   counter-reset: step;
   max-width: 760px;
-  margin: 2.5rem auto 0;
+  margin: 1.5rem auto 0;
   padding: 0;
 }
 .process-steps li {
@@ -538,7 +538,7 @@ a.partner-card:hover {
   top: 0;
   width: 2.8rem;
   height: 2.8rem;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--indigo);
   color: var(--white);
   font-family: var(--font-heading);
@@ -578,3 +578,115 @@ a.partner-card:hover {
   text-align: center;
 }
 .site-footer a { color: var(--indigo); font-weight: 700; }
+
+
+/* ==========================================================
+   Look & feel details: gradients, faded dots, flower watermark.
+   To tone any of it down, delete the block you don't want.
+   ========================================================== */
+
+/* Header: a thin violet-to-aqua stripe along the bottom edge */
+.site-header { border-bottom: 0; position: relative; }
+.site-header::after {
+  content: "";
+  display: block;
+  height: 6px;
+  background: linear-gradient(90deg, var(--indigo), var(--purple) 45%, #8FC8D4 100%);
+}
+
+/* Page title bands: deep gradient, faded dots, white flower silhouette */
+.page-banner {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, var(--indigo) 0%, var(--purple) 100%);
+}
+.page-banner h1 { position: relative; color: var(--white); }
+.page-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.35) 1.6px, transparent 2.2px) 0 0 / 20px 20px;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, transparent 45%, transparent 55%, #000 100%);
+          mask-image: linear-gradient(90deg, #000 0%, transparent 45%, transparent 55%, #000 100%);
+  opacity: 0.55;
+}
+.page-banner::after {
+  content: "";
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  transform: translateY(-50%);
+  background: url("../images/logo-flower.png") center / contain no-repeat;
+  filter: brightness(0) invert(1);
+  opacity: 0.14;
+}
+@media (max-width: 600px) { .page-banner::after { width: 100px; height: 100px; right: -10px; } }
+
+/* Purple panels: gradient + faded flower in the corner */
+.panel {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--purple) 0%, var(--indigo) 100%);
+}
+.panel > * { position: relative; }
+.panel::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: -40px;
+  width: 190px;
+  height: 190px;
+  background: url("../images/logo-flower.png") center / contain no-repeat;
+  filter: brightness(0) invert(1);
+  opacity: 0.12;
+}
+.panel .btn { background: var(--white); color: var(--indigo); }
+.panel .btn:hover { background: var(--lavender); color: var(--indigo); }
+
+/* "Over $500,000" band */
+.stat {
+  background: linear-gradient(90deg, var(--periwinkle), var(--lavender) 50%, var(--periwinkle));
+  margin-top: 1.5rem;
+}
+
+/* Save the date: lavender with faded dots and a faded flower */
+.save-the-date {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle, rgba(94,68,146,0.22) 1.6px, transparent 2.2px) 0 0 / 20px 20px,
+    linear-gradient(180deg, var(--lavender), #E6D2F7);
+}
+.save-the-date > * { position: relative; }
+.save-the-date::after {
+  content: "";
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  width: 170px;
+  height: 170px;
+  transform: translateY(-50%);
+  background: url("../images/logo-flower.png") center / contain no-repeat;
+  opacity: 0.22;
+}
+@media (max-width: 700px) { .save-the-date::after { display: none; } }
+
+/* Photos and cards get a crisp violet edge instead of rounded corners */
+.photo-frame { border-color: var(--aqua); outline: 2px solid var(--purple); outline-offset: -2px; }
+.partner-card { border-color: var(--purple); }
+.partner-card .partner-info { border-top: 3px solid var(--aqua); }
+.chair-year, .card { border: 1px solid var(--periwinkle); }
+
+/* Footer: same gradient family as the header */
+.site-footer { background: linear-gradient(120deg, var(--indigo), var(--purple)); color: var(--white); }
+.site-footer a { color: var(--white); }
+.site-footer a:hover { color: var(--aqua); }
+
+/* Phones: keep the big header name to two lines */
+@media (max-width: 600px) {
+  .brand { gap: 0.6rem; }
+  .brand-logo { width: 72px; height: 72px; }
+  .brand-name { letter-spacing: 0.07em; font-size: 1.3rem; line-height: 1.15; }
+}
