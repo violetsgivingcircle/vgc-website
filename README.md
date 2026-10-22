@@ -51,7 +51,7 @@ Then replace the old file with the updated one (see "Publishing a change" below)
 | Instagram feed | `contact.html` | Already connected through a free Behold account (feed ID in the page). New posts appear by themselves; edit the look at behold.so. If the feed stops, check the Behold dashboard and that the Instagram account is still connected |
 | Change the Donate link | `donate.html` | Edit the `href` on the Donate button |
 | Change homepage photos | `images/slide-1.jpg` to `slide-4.jpg` | Replace the files, keeping the same names |
-| Change colors | `css/styles.css` | Edit the color values at the very top |
+| Change colors or fonts | `css/styles.css` | Edit the color and font values at the very top (fonts are DM Serif Display for headings and DM Sans for body; to swap them, change `--font-heading` and `--font-body` and the Google Fonts link in each page's `<head>`) |
 | Change the total granted | `index.html`, `what-we-do.html` | Edit the "Over $500,000" line on the home page and the "over $500,000" sentence in step 6 (Grant Funds) on What We Do |
 
 **Photo tips:** Use JPG files. For the homepage carousel, wide photos (16:9, about 1600 pixels wide) look best. Keep each photo under about 500 KB so the site loads quickly. Free tools like squoosh.app can shrink them.
@@ -108,7 +108,7 @@ If you inherit this and are not sure where to start: open Claude, upload the fil
 
 Look for pink dashed boxes labeled **PLACEHOLDER** on the pages. Delete each box after filling in the real content.
 
-- These images are placeholders (plain colored tiles). Replace each with the real photo, keeping the same file name: `images/slide-1.jpg` to `slide-4.jpg` (home carousel), `images/board-photo.jpg`, `images/people/` (co-chairs, including the four new ones: `channing-b.jpg`, `jade-c.jpg`, `ria-d.jpg`, `paloma-v.jpg`), `images/process-event.jpg` and `process-site-visit.jpg` (What We Do), `images/past-events/` (4 photos per event, named like `2025-1.jpg` to `2025-4.jpg`), and `images/donate-hero.jpg`. Grant partner photos in `images/partners/` are optional; without them each card shows the flower logo.
+- All photos have been added (home carousel, board, co-chairs, What We Do, past events, donate, and grant partners). To swap any photo later, upload a new JPG with the same file name; keep each under about 500 KB.
 - `grant-partners.html`: confirm the name "Harvest Home" (the list said "Harvest House"; the website is harvesthomela.org).
 - `our-event.html` is blank except for the save-the-date until the 2027 details are ready.
 - `contact.html`: there is no contact form; people use the email address, phone, or mailing address.
