@@ -51,7 +51,7 @@ Then replace the old file with the updated one (see "Publishing a change" below)
 | Instagram feed | `contact.html` | Already connected through a free Behold account (feed ID in the page). New posts appear by themselves; edit the look at behold.so. If the feed stops, check the Behold dashboard and that the Instagram account is still connected |
 | Change the Donate link | `donate.html` | Edit the `href` on the Donate button |
 | Change homepage photos | `images/slide-1.jpg` to `slide-4.jpg` | Replace the files, keeping the same names |
-| Change colors or fonts | `css/styles.css` | Edit the color and font values at the very top (fonts are DM Serif Display for headings and DM Sans for body; to swap them, change `--font-heading` and `--font-body` and the Google Fonts link in each page's `<head>`) |
+| Change colors or fonts | `css/styles.css` | Edit the color and font values at the very top (fonts are Cormorant Garamond (bold) for headings and Montserrat for body; to swap them, change `--font-heading` and `--font-body` and the Google Fonts link in each page's `<head>`) |
 | Change the total granted | `index.html`, `what-we-do.html` | Edit the "Over $500,000" line on the home page and the "over $500,000" sentence in step 6 (Grant Funds) on What We Do |
 
 **Photo tips:** Use JPG files. For the homepage carousel, wide photos (16:9, about 1600 pixels wide) look best. Keep each photo under about 500 KB so the site loads quickly. Free tools like squoosh.app can shrink them.

@@ -7,7 +7,8 @@
 
 :root {
   --periwinkle: #C3CDF1;   /* header bands, soft backgrounds */
-  --lavender:   #F0DDFD;   /* page background accents */
+  --mist:       #EEE8F7;   /* page background: palest tint of the flower violet */
+  --lavender:   #DDD1F0;   /* tinted bands and boxes */
   --purple:     #5E4492;   /* panels, buttons (deep violet from the flower petals) */
   --indigo:     #34245C;   /* headings, links, strong accents (darkest flower violet) */
   --ink:        #231F20;   /* body text */
@@ -15,8 +16,8 @@
   --magenta:    #D6336C;   /* small accent only (flower center) */
   --aqua:       #D3EEF0;   /* photo borders */
 
-  --font-heading: "DM Serif Display", Georgia, serif;
-  --font-body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 
   --radius: 0;
   --max-width: 1180px;
@@ -29,10 +30,10 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: var(--font-body);
-  font-size: 1.05rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.7;
   color: var(--ink);
-  background: var(--white);
+  background: var(--mist);
 }
 
 img { max-width: 100%; display: block; }
@@ -50,13 +51,13 @@ a:hover { color: var(--magenta); }
 h1, h2, h3 {
   font-family: var(--font-heading);
   color: var(--indigo);
-  line-height: 1.2;
-  font-weight: 400;
+  line-height: 1.15;
+  font-weight: 700;
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 1rem; }
-h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin: 0 0 0.75rem; }
-h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
+h1 { font-size: clamp(2.2rem, 5.5vw, 3.6rem); margin: 0 0 1rem; }
+h2 { font-size: clamp(1.7rem, 3.8vw, 2.4rem); margin: 0 0 0.75rem; }
+h3 { font-size: 1.45rem; margin: 0 0 0.5rem; }
 
 .skip-link {
   position: absolute;
@@ -88,14 +89,15 @@ h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
   text-decoration: none;
 }
 
-.brand-logo { width: 96px; height: 96px; object-fit: contain; }
+.brand-logo { width: 110px; height: 110px; object-fit: contain; }
 
 .brand-name {
   font-family: var(--font-heading);
   color: var(--indigo);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: clamp(1.25rem, 4vw, 2.5rem);
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  font-size: clamp(1.45rem, 4.4vw, 3.3rem);
 }
 
 .nav-toggle {
@@ -247,8 +249,8 @@ main { padding-bottom: 0; }
   text-align: center;
   padding: 1.75rem 1rem;
 }
-.save-the-date h2 { text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
-.save-the-date p { font-size: 1.3rem; margin: 0 0 1rem; }
+.save-the-date h2 { text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
+.save-the-date p { font-size: 1.15rem; margin: 0 0 1rem; }
 
 .stat { text-align: center; padding: 1.5rem 1rem; }
 .stat strong {
@@ -326,7 +328,7 @@ main { padding-bottom: 0; }
 .chair-name {
   font-family: var(--font-heading);
   color: var(--indigo);
-  font-weight: 400;
+  font-weight: 700;
   margin: 0 0 0.5rem;
 }
 blockquote.quote { margin: 0; font-style: italic; }
@@ -601,28 +603,6 @@ a.partner-card:hover {
   background: linear-gradient(120deg, var(--indigo) 0%, var(--purple) 100%);
 }
 .page-banner h1 { position: relative; color: var(--white); }
-.page-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, rgba(255,255,255,0.35) 1.6px, transparent 2.2px) 0 0 / 20px 20px;
-  -webkit-mask-image: linear-gradient(90deg, #000 0%, transparent 45%, transparent 55%, #000 100%);
-          mask-image: linear-gradient(90deg, #000 0%, transparent 45%, transparent 55%, #000 100%);
-  opacity: 0.55;
-}
-.page-banner::after {
-  content: "";
-  position: absolute;
-  right: 4%;
-  top: 50%;
-  width: 150px;
-  height: 150px;
-  transform: translateY(-50%);
-  background: url("../images/logo-flower.png") center / contain no-repeat;
-  filter: brightness(0) invert(1);
-  opacity: 0.14;
-}
-@media (max-width: 600px) { .page-banner::after { width: 100px; height: 100px; right: -10px; } }
 
 /* Purple panels: gradient + faded flower in the corner */
 .panel {
@@ -631,17 +611,6 @@ a.partner-card:hover {
   background: linear-gradient(145deg, var(--purple) 0%, var(--indigo) 100%);
 }
 .panel > * { position: relative; }
-.panel::after {
-  content: "";
-  position: absolute;
-  right: -30px;
-  bottom: -40px;
-  width: 190px;
-  height: 190px;
-  background: url("../images/logo-flower.png") center / contain no-repeat;
-  filter: brightness(0) invert(1);
-  opacity: 0.12;
-}
 .panel .btn { background: var(--white); color: var(--indigo); }
 .panel .btn:hover { background: var(--lavender); color: var(--indigo); }
 
@@ -656,22 +625,9 @@ a.partner-card:hover {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle, rgba(94,68,146,0.22) 1.6px, transparent 2.2px) 0 0 / 20px 20px,
-    linear-gradient(180deg, var(--lavender), #E6D2F7);
+    var(--lavender);
 }
 .save-the-date > * { position: relative; }
-.save-the-date::after {
-  content: "";
-  position: absolute;
-  right: 6%;
-  top: 50%;
-  width: 170px;
-  height: 170px;
-  transform: translateY(-50%);
-  background: url("../images/logo-flower.png") center / contain no-repeat;
-  opacity: 0.22;
-}
-@media (max-width: 700px) { .save-the-date::after { display: none; } }
 
 /* Photos and cards get a crisp violet edge instead of rounded corners */
 .photo-frame { border-color: var(--aqua); outline: 2px solid var(--purple); outline-offset: -2px; }
@@ -688,5 +644,24 @@ a.partner-card:hover {
 @media (max-width: 600px) {
   .brand { gap: 0.6rem; }
   .brand-logo { width: 72px; height: 72px; }
-  .brand-name { letter-spacing: 0.07em; font-size: 1.3rem; line-height: 1.15; }
+  .brand-name { letter-spacing: 0.06em; font-size: 1.5rem; line-height: 1.1; }
 }
+
+/* Who We Are: board intro sits level with the photo, caption runs full width below */
+.board-intro { align-items: center; }
+.board-intro p { font-size: 1.05rem; }
+.board-caption { max-width: 980px; margin: 1.25rem auto 0; }
+
+/* Save the date: big dots frame the sides and leave the middle clear for the text */
+.save-the-date::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(94,68,146,0.32) 5px, transparent 5.6px) 0 0 / 38px 38px;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, transparent 28%, transparent 72%, #000 100%);
+          mask-image: linear-gradient(90deg, #000 0%, transparent 28%, transparent 72%, #000 100%);
+}
+.site-header { background: var(--mist); }
+
+/* Cormorant defaults to old-style numbers (like $5OO,OOO with dropped digits); use standard ones */
+h1, h2, h3, .brand-name, .stat strong { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
