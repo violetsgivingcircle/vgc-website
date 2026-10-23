@@ -665,3 +665,11 @@ a.partner-card:hover {
 
 /* Cormorant defaults to old-style numbers (like $5OO,OOO with dropped digits); use standard ones */
 h1, h2, h3, .brand-name, .stat strong { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+
+/* Our Event page: photo scene + details */
+.event-hero { background: #111; }
+.event-hero img { width: 100%; height: auto; display: block; }
+.event-details { text-align: center; padding: 1.75rem 0 2rem; background: var(--lavender); }
+.event-details h2 { margin-bottom: 0.25rem; }
+.event-when { font-family: var(--font-heading); font-weight: 700; font-size: clamp(1.4rem, 3.5vw, 2rem); color: var(--indigo); margin: 0; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+.event-where { font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin: 0.25rem 0 0.75rem; }
