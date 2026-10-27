@@ -673,3 +673,21 @@ h1, h2, h3, .brand-name, .stat strong { font-variant-numeric: lining-nums; font-
 .event-details h2 { margin-bottom: 0.25rem; }
 .event-when { font-family: var(--font-heading); font-weight: 700; font-size: clamp(1.4rem, 3.5vw, 2rem); color: var(--indigo); margin: 0; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 .event-where { font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin: 0.25rem 0 0.75rem; }
+
+/* Sticky header: the logo, name, menu, and gradient stripe stay at the top while scrolling.
+   After a little scrolling the header shrinks (the "scrolled" class is added by js/main.js). */
+html { scroll-padding-top: 130px; }
+.site-header { position: sticky; top: 0; z-index: 50; }
+.brand-logo, .brand-name, .header-top, .site-nav ul { transition: all 0.2s ease; }
+.site-header.scrolled .brand-logo { width: 52px; height: 52px; }
+.site-header.scrolled .brand-name { font-size: clamp(1.1rem, 2.6vw, 1.7rem); }
+.site-header.scrolled .header-top { padding-top: 0.35rem; padding-bottom: 0.1rem; }
+.site-header.scrolled .site-nav ul { padding-bottom: 0.4rem; }
+@media (max-width: 760px) {
+  .site-header.scrolled .brand-logo { width: 44px; height: 44px; }
+  .site-header.scrolled .brand-name { font-size: 1rem; }
+  .site-nav.open { max-height: calc(100vh - 110px); overflow-y: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo, .brand-name, .header-top, .site-nav ul { transition: none; }
+}
