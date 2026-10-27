@@ -57,6 +57,8 @@ Then replace the old file with the updated one (see "Publishing a change" below)
 
 **Photo tips:** Use JPG files. For the homepage carousel, wide photos (16:9, about 1600 pixels wide) look best. Keep each photo under about 500 KB so the site loads quickly. Free tools like squoosh.app can shrink them.
 
+**Sticky header:** the logo, name, and menu stay at the top as you scroll (and shrink a little). This is handled by the "Sticky header" block at the bottom of `css/styles.css` and the last block of `js/main.js`.
+
 **Menu and footer:** The menu at the top and the footer appear in all 8 files. If you add, rename, or remove a page, update the menu in every file. (An AI can do this for you: "Add a new page called Press to the menu on every page.")
 
 ---
