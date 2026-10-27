@@ -59,3 +59,18 @@
   show(0);
   start();
 })();
+
+/* Shrink the sticky header once the page has been scrolled a bit.
+   Two different thresholds (80 and 20) keep it from flickering near the edge. */
+(function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  var scrolled = false;
+  function update() {
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    if (!scrolled && y > 80) { scrolled = true; header.classList.add('scrolled'); }
+    else if (scrolled && y < 20) { scrolled = false; header.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
