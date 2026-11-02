@@ -107,7 +107,7 @@ If you inherit this and are not sure where to start: open Claude, upload the fil
 
 ## Items still to be finished (as of the first draft)
 
-- **Before launch:** every page has a `<meta name="robots" content="noindex, nofollow">` line near the top that hides the draft from Google. Delete that line (and the comment above it) from all 8 pages when the site goes live. Ask an AI: "Remove the noindex robots tag from every HTML page."
+- The site is live at violetsgivingcircle.org and is visible to search engines (the temporary "hide from Google" tag has been removed).
 
 Look for pink dashed boxes labeled **PLACEHOLDER** on the pages. Delete each box after filling in the real content.
 
@@ -115,4 +115,3 @@ Look for pink dashed boxes labeled **PLACEHOLDER** on the pages. Delete each box
 - `grant-partners.html`: confirm the name "Harvest Home" (the list said "Harvest House"; the website is harvesthomela.org).
 - `our-event.html` is blank except for the save-the-date until the 2027 details are ready.
 - `contact.html`: there is no contact form; people use the email address, phone, or mailing address.
-- `who-we-are.html`: quotes are needed for Ria D. '26, Paloma V. '26, Channing B. '25, and Jade C. '25.
